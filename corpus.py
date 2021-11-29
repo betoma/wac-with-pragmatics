@@ -181,3 +181,7 @@ def imageid2rows(region_data, idx, ic, ii):
         (ri, idx[(ic, ii, ri)]) for ri in region_data[(ic, ii)] if (ic, ii, ri) in idx
     ]
     return map(list, zip(*rows))
+
+
+def regionid2row(idx, ic, ii, ri):
+    return idx[(ic, ii, ri)]
